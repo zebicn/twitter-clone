@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Clone by NinoDev</title>
+
+
+    <link rel='stylesheet prefetch'
+          href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css'>
+    <!-- Custom css-->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+<!-- Fixed top navbar -->
+<nav class="navbar navbar-toggleable-md fixed-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse container">
+        <!-- Navbar navigation links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="octicon octicon-home" aria-hidden="true"></i> Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="octicon octicon-zap"></i> Moments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="octicon octicon-bell"></i> Notifications</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="octicon octicon-inbox"></i> Messages</a>
+            </li>
+        </ul>
+        <!-- END: Navbar navigation links -->
+        <!-- Navbar Search form -->
+        <form class="navbar-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control input-search" placeholder="Search Twitter" name="srch-term"
+                       id="srch-term">
+                <div class="input-group-btn">
+                    <button class="btn btn-default btn-search" type="submit"><i
+                            class="octicon octicon-search navbar-search-icon"></i></button>
+                </div>
+            </div>
+        </form>
+        <!-- END: Navbar Search form -->
+        <!-- Navbar User menu -->
+        <div class="dropdown navbar-user-dropdown">
+            <button class="btn btn-secondary  btn-circle" type="button" id="dropdownMenuButton"
+                     aria-haspopup="true" aria-expanded="false"></button>
+        </div>
+        <!-- END: Navbar User menu -->
+        <!-- Navbar Tweet button -->
+        <button class="btn btn-search-bar">Tweet</button>
+    </div>
+</nav>
+<!-- END: Fixed top navbar -->
+<div class="main-container">
+    <!-- Profile background large image -->
+    <div class="row profile-background">
+        <div class="container">
+            <!-- User main avatar -->
+            <div class="avatar-container">
+                <div class="avatar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar profile-stats">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li class="profile-stats-item-active">
+                            <a>
+                                <span class="profile-stats-item profile-stats-item-label">Tweets</span>
+                                <span class="profile-stats-item profile-stats-item-number">71</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="profile-stats-item profile-stats-item-label">Following</span>
+                                <span class="profile-stats-item profile-stats-item-number">547</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="profile-stats-item profile-stats-item-label">Followers</span>
+                                <span class="profile-stats-item profile-stats-item-number">488</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="profile-stats-item profile-stats-item-label">Likes</span>
+                                <span class="profile-stats-item profile-stats-item-number">241</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container main-content">
+        <div class="row">
+            <div class="col profile-col">
+                <!-- Left column -->
+                <div class="profile-header">
+                    <!-- Header information -->
+                    <h3 class="profile-fullname"><a>Ninoslav Zebic<a></h3>
+                    <h2 class="profile-element"><a>@NinoDev</a></h2>
+                    <p>Front-end Developer</p>
+                    <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-link"></i>&nbsp;zebicn.github.io</a>
+                    <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-location"></i>&nbsp;Belgrade,
+                        Serbia</a>
+                    <h2 class="profile-element"><i class="octicon octicon-calendar"></i>Joined October 2019</h2>
+                    <button class="btn btn-search-bar tweet-to-btn">Tweet to Ninoslav Zebic</button>
+                    <a class="profile-element profile-website" href=""><i class="octicon octicon-file-media"></i>57
+                        Photos and videos</a>
+                    <div class="pic-grid">
+                        <!-- Image grid -->
+                        <div class="row">
+                            <div class="col pic-col"><img src="https://pluralsight.imgix.net/paths/path-icons/html5-7ac65c8ec0.png"
+                                                          height="73px" class=""></div>
+                            <div class="col pic-col"><img src="https://cdn.imgbin.com/6/10/15/imgbin-web-development-html-cascading-style-sheets-javascript-css3-world-wide-web-g3zdG0ARPCpMuXHqPK12Td4rH.jpg"
+                                                          height="73px" class=""></div>
+                            <div class="col pic-col"><img src="https://www.claudiodimauro.it/wp-content/uploads/2016/03/js-logo.png"
+                                                          height="73px" class=""></div>
+                        </div>
+                        <!-- End: row -->
+                        <div class="row">
+                            <div class="col pic-col"><img src="https://miro.medium.com/max/1024/1*9HanDsRU11ZMsgDGJwN96w.png"
+                                                          height="73px" class=""></div>
+                            <div class="col pic-col"><img src="https://pngimage.net/wp-content/uploads/2018/06/react-icon-png-7.png"
+                                                          height="73px" class=""></div>
+                            <div class="col pic-col"><img src="https://avatars2.githubusercontent.com/u/317889?s=200&v=4"
+                                                          height="73px" class=""></div>
+                        </div>
+                        <!-- End: row -->
+                    </div>
+                    <!-- End: image grid -->
+                </div>
+            </div>
+            <!-- End; Left column -->
+            <!-- Center content column -->
+            <div class="col-6">
+                <ol class="tweet-list">
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                <span class="username">@NinoDev</span>
+                                <span class="tweet-time">- Nov 10</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                     src="assets/user-icon.jpg"
+                                     alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">Mozilla has released Beta!!<br>Result:
+                                    Test about-to-be-released features in the most stable pre-release build. <a
+                                            href="https://download.mozilla.org/?product=firefox-beta-stub&os=win&lang=en-US"
+                                            class="twitter-timeline-link"
+                                            target="_blank"><span class="">https://www.mozilla.org/</span></a>
+                                    <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                                                                                     class="twitter-hashtag"><s>#</s><b>mozilla</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                <span class="username">@NinoDev</span>
+                                <span class="tweet-time">- Nov 10</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                     src="assets/user-icon.jpg"
+                                     alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">Mozilla has released Beta!!<br>Result:
+                                    Test about-to-be-released features in the most stable pre-release build. <a
+                                            href="https://download.mozilla.org/?product=firefox-beta-stub&os=win&lang=en-US"
+                                            class="twitter-timeline-link"
+                                            target="_blank"><span class="">https://www.mozilla.org/</span></a>
+                                    <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                                                                                     class="twitter-hashtag"><s>#</s><b>mozilla</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                <span class="username">@NinoDev</span>
+                                <span class="tweet-time">- Nov 10</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                     src="assets/user-icon.jpg"
+                                     alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">Mozilla has released Beta!!<br>Result:
+                                    Test about-to-be-released features in the most stable pre-release build. <a
+                                            href="https://download.mozilla.org/?product=firefox-beta-stub&os=win&lang=en-US"
+                                            class="twitter-timeline-link"
+                                            target="_blank"><span class="">https://www.mozilla.org/</span></a>
+                                    <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                                                                                     class="twitter-hashtag"><s>#</s><b>mozilla</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                <span class="username">@NinoDev</span>
+                                <span class="tweet-time">- Nov 10</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                     src="assets/user-icon.jpg"
+                                     alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">Mozilla has released Beta!!<br>Result:
+                                    Test about-to-be-released features in the most stable pre-release build. <a
+                                            href="https://download.mozilla.org/?product=firefox-beta-stub&os=win&lang=en-US"
+                                            class="twitter-timeline-link"
+                                            target="_blank"><span class="">https://www.mozilla.org/</span></a>
+                                    <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                                                                                     class="twitter-hashtag"><s>#</s><b>mozilla</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                <span class="username">@NinoDev</span>
+                                <span class="tweet-time">- Nov 10</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                     src="assets/user-icon.jpg"
+                                     alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">Mozilla has released Beta!!<br>Result:
+                                    Test about-to-be-released features in the most stable pre-release build. <a
+                                            href="https://download.mozilla.org/?product=firefox-beta-stub&os=win&lang=en-US"
+                                            class="twitter-timeline-link"
+                                            target="_blank"><span class="">https://www.mozilla.org/</span></a>
+                                    <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                                                                                     class="twitter-hashtag"><s>#</s><b>mozilla</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <!-- End: tweet list -->
+            </div>
+            <!-- End: Center content column -->
+            <div class="col right-col">
+                <div class="content-panel">
+                    <div class="panel-header">
+                        <h4>Who to follow</h4><small><a href="">Refresh</a></small><small><a href="">View
+                        all</a></small>
+                    </div>
+                    <!-- Who to Follow panel -->
+                    <div class="panel-content">
+                        <!--Follow list -->
+                        <ol class="tweet-list">
+                            <li class="tweet-card">
+                                <div class="tweet-content">
+                                    <img class="tweet-card-avatar"
+                                         src="assets/user-icon.jpg"
+                                         alt="">
+                                    <div class="tweet-header">
+                    <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                        <span class="username">@NinoDev</span>
+                                    </div>
+
+                                    <button class="btn btn-follow">Follow</button>
+                                </div>
+                            </li>
+                            <li class="tweet-card">
+                                <div class="tweet-content">
+                                    <img class="tweet-card-avatar"
+                                         src="assets/user-icon.jpg"
+                                         alt="">
+                                    <div class="tweet-header">
+                    <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                        <span class="username">@NinoDev</span>
+                                    </div>
+
+                                    <button class="btn btn-follow">Follow</button>
+                                </div>
+                            </li>
+                            <li class="tweet-card">
+                                <div class="tweet-content">
+                                    <img class="tweet-card-avatar"
+                                         src="assets/user-icon.jpg"
+                                         alt="">
+                                    <div class="tweet-header">
+                    <span class="fullname">
+                  <strong>Ninoslav Zebic</strong>
+                </span>
+                                        <span class="username">@NinoDev</span>
+                                    </div>
+
+                                    <button class="btn btn-follow">Follow</button>
+                                </div>
+                            </li>
+                        </ol>
+                        <!--END: Follow list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+</div>
+
+</body>
+</html>
